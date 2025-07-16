@@ -1,0 +1,33 @@
+.ttt-status {
+  padding: 0.6em 1em;
+  margin: 0.5em auto 0.7em auto;
+  background: linear-gradient(90deg,var(--primary,#1976d2) 0%,var(--accent,#ffeb3b) 100%);
+  border-radius: 13px;
+  color: #fff;
+  font-size: 1.14em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.10);
+  width: fit-content;
+  min-width: 180px;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.ttt-status-over {
+  background: linear-gradient(90deg,var(--accent,#ffeb3b) 0%,var(--primary,#1976d2) 100%);
+  color: var(--secondary,#424242);
+}
+
+.ttt-status-inactive {
+  background: #eef3fa;
+  color: #333;
+  font-size: 1em;
+}
+
+@media (max-width: 600px) {
+  .ttt-status {
+    font-size: 1em;
+    padding: 0.45em 0.7em;
+    min-width: 96px;
+  }
+}

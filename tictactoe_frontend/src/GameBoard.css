@@ -1,0 +1,77 @@
+.ttt-board {
+  display: flex;
+  flex-direction: column;
+  width: clamp(240px, 50vw, 340px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  background: var(--bg-secondary, #f8f9fa);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(25, 118, 210, 0.09), 0 1.5px 0 var(--border-color, #e9ecef);
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  transition: background 0.25s;
+}
+
+.ttt-row {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  gap: 0.1rem;
+}
+
+.ttt-cell {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+  border: none;
+  background: var(--bg-primary, #fff);
+  font-size: min(7vw, 2.4rem);
+  font-weight: 700;
+  color: var(--primary, #1976d2);
+  border-radius: 10px;
+  margin: 0.08rem;
+  outline: 2px solid var(--border-color, #e9ecef);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.06);
+  transition: background 0.15s, color 0.12s, box-shadow 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.ttt-cell.filled {
+  background: var(--bg-secondary, #f8f9fa);
+  color: var(--secondary, #424242);
+  cursor: default;
+}
+
+.ttt-cell.highlight {
+  background: var(--accent, #ffeb3b);
+  color: var(--primary, #1976d2);
+  animation: ttt-fade 800ms linear alternate infinite;
+}
+
+@keyframes ttt-fade {
+  from { filter: brightness(1); }
+  to   { filter: brightness(1.23); }
+}
+
+.ttt-cell:active:not(:disabled) {
+  background: var(--primary, #1976d2);
+  color: #fff;
+}
+
+@media (max-width: 650px) {
+  .ttt-board {
+    width: 94vw;
+    min-width: 180px;
+    padding: .5rem;
+  }
+  .ttt-cell {
+    font-size: 1.3rem;
+    min-width: 36px;
+  }
+}
