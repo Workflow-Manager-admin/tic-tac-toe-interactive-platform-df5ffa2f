@@ -1,0 +1,83 @@
+.ttt-history-panel {
+  background: var(--bg-secondary, #f8f9fa);
+  border-radius: 18px;
+  box-shadow: 0 3px 8px rgba(66, 66, 66, 0.07);
+  width: 280px;
+  max-width: 88vw;
+  min-height: 224px;
+  padding: 1.1rem 1.2rem 0.9rem 1.2rem;
+  margin: 1.3rem 0 1.3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ttt-history-title {
+  margin: 0 0 0.7rem 0;
+  font-size: 1.19em;
+  font-weight: 700;
+  color: var(--primary,#1976d2);
+  letter-spacing: 0.01em;
+}
+.ttt-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.ttt-history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.28em 0.6em;
+  margin-bottom: 4px;
+  cursor: pointer;
+  transition: background 0.16s;
+  font-size: 0.99em;
+  background: #fff;
+}
+.ttt-history-item:hover,
+.ttt-history-item:focus {
+  background: var(--primary,#1976d2);
+  color: #fff;
+}
+.ttt-history-item.winner {
+  border-left: 5px solid var(--accent, #ffeb3b);
+}
+.ttt-history-item.draw {
+  border-left: 5px solid #dadada;
+}
+.ttt-hist-id { font-weight: 500; margin-right: 0.8em;}
+.ttt-hist-player { font-size: 0.98em; flex:1;}
+.ttt-hist-outcome { font-weight: 600; }
+.ttt-hist-date { font-size: 0.85em; opacity: 0.7; margin-left: 0.8em; }
+
+.ttt-history-loading {
+  color: #999;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+@media (max-width: 990px) {
+  .ttt-history-panel {
+    width: 99vw;
+    margin: 1em 0 0.8em 0;
+    min-height: 108px;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .ttt-history-list {
+    width: 99vw;
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .ttt-history-panel {
+    width: 99vw;
+    padding: 0.6rem 0.5rem 0.7rem 0.7rem;
+  }
+  .ttt-history-list {
+    font-size: 0.95em;
+  }
+}

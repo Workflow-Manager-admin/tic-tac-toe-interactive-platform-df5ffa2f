@@ -1,0 +1,72 @@
+.ttt-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+  align-items: center;
+  margin: 1rem 0 1.2rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ttt-btn {
+  border: none;
+  border-radius: 9px;
+  padding: 0.43em 1.4em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 2px;
+  white-space: nowrap;
+  transition: background 0.19s, color 0.15s, box-shadow 0.16s;
+  box-shadow: 0 1.2px 3px rgba(25, 118, 210, 0.07), 0 0.7px 0 var(--border-color, #e9ecef);
+}
+
+.ttt-btn-primary {
+  background: var(--primary, #1976d2);
+  color: #fff;
+}
+
+.ttt-btn-primary:disabled {
+  opacity: 0.55;
+  background: #cccccc;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.ttt-btn-secondary {
+  background: var(--secondary,#424242);
+  color: var(--accent,#ffeb3b);
+}
+
+.ttt-btn-secondary:disabled {
+  background: #dadada;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.ttt-player-input {
+  border-radius: 7px;
+  border: 1.3px solid var(--border-color, #e9ecef);
+  padding: 0.38em 0.85em;
+  font-size: 1em;
+  color: var(--text-primary,#282c34);
+  margin-right: 0.7em;
+  background: var(--bg-primary,#fff);
+  outline: none;
+  transition: border 0.18s, box-shadow 0.14s;
+}
+.ttt-player-input:focus {
+  border-color: var(--primary,#1976d2);
+  box-shadow: 0 2px 7px #1976d277;
+}
+
+@media (max-width:545px) {
+  .ttt-controls {
+    flex-direction: column;
+    gap:7px;
+  }
+  .ttt-player-input {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+}
